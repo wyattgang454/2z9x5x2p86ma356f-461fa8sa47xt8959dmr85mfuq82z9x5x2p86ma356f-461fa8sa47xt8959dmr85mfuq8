@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-32x32-4102f07.png"
+    />
+    <title>Microsoft Teams classic</title>
+  </head>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .browser {
+        flex-grow: 1;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    
+    .navbar {
+        background-color: #2D399A;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar__address-bar {
+        flex-grow: 1;
+        margin: 0 10px;
+        padding: 8px;
+        background-color: #f5f5f5;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 70%; /* Adjust the width as desired */
+        max-width: 500px; /* Set a maximum width if needed */
+    }
+    
+    .navbar__button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: #f5f5f5;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    .content {
+        height: calc(100% - 40px);
+        border: none;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<div class="browser">
+    <div class="navbar">
+        <button class="navbar__button" onclick="changeEmbed('https://ytgold.unblockedgamers.repl.co/')">Watch</button>
+        <button class="navbar__button" onclick="changeEmbed('https://games.crazychannel.repl.co/')">Games</button>
+        <button class="navbar__button" onclick="changeEmbed('https://apps.crazychannel.repl.co/')">Apps</button>
+        <form id="searchForm" onsubmit="handleFormSubmit(event)">
+            <input type="text" class="navbar__address-bar" id="searchQuery" placeholder="Search the web..." autofocus>
+        </form>
+    </div>
+    <iframe class="content" id="searchFrame" src="https://unblocked-os-v20.crazychannel.repl.co/demobrowser" frameborder="0"></iframe>
+</div>
+
+<script>
+    // Function to handle form submission
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const searchQuery = document.getElementById('searchQuery').value.trim();
+        if (searchQuery !== '') {
+            performSearch(searchQuery);
+        }
+    }
+
+    // Function to perform a search query
+    function performSearch(query) {
+        const searchUrl = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+        const searchFrame = document.getElementById('searchFrame');
+        searchFrame.src = searchUrl;
+    }
+
+    // Function to change the embed source
+    function changeEmbed(embedUrl) {
+        const searchFrame = document.getElementById('searchFrame');
+        searchFrame.src = embedUrl;
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        var disclaimer = document.querySelector([[href^="https://tiiny.host"];
+        if(disclaimer) {
+            disclaimer.remove();
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
